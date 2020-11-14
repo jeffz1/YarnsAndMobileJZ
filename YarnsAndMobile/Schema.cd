@@ -20,6 +20,17 @@
       <Property Name="Address" />
     </ShowAsAssociation>
   </Class>
+  <Class Name="YarnsAndMobile.Models.Sale" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAABAAAAAAAAAAAAIAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Sale.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Member" />
+      <Property Name="Book" />
+    </ShowAsAssociation>
+  </Class>
   <Class Name="YarnsAndMobile.Models.Address" Collapsed="true">
     <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
