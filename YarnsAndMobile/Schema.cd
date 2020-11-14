@@ -27,5 +27,23 @@
       <FileName>Models\Address.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="YarnsAndMobile.Models.Phone" Collapsed="true">
+    <Position X="4.75" Y="3.25" Width="1.5" />
+    <AssociationLine Name="Member" Type="YarnsAndMobile.Models.Member" ManuallyRouted="true">
+      <Path>
+        <Point X="5.125" Y="3.25" />
+        <Point X="5.12" Y="3.153" />
+        <Point X="5.12" Y="1.029" />
+        <Point X="4.25" Y="1.029" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAEAAAAAAAAAIAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\Phone.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Member" />
+    </ShowAsAssociation>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
