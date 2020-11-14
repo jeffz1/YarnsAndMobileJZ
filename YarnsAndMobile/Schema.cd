@@ -16,6 +16,16 @@
       <HashCode>AAACAEAAAAAAAAAAAAAABAAAAAgAAAACAAAAIAAAAAg=</HashCode>
       <FileName>Models\Member.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Address" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="YarnsAndMobile.Models.Address" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAIAAAACAAAAAAAAAAgAAAARAAAAAA=</HashCode>
+      <FileName>Models\Address.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
