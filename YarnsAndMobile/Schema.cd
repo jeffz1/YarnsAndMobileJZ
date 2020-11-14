@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="To create this using Core:&#xD;&#xA;From the New File dialog box create an empty XML file named Diagram.cd (replace Diagram with your choice), right click the file and select Open With..., and select Text Editor, then replace its contents with the following:&#xD;&#xA;&#xD;&#xA;&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;&#xD;&#xA;&lt;ClassDiagram MajorVersion=&quot;1&quot; MinorVersion=&quot;1&quot;&gt;&#xD;&#xA;  &lt;Font Name=&quot;Segoe UI&quot; Size=&quot;9&quot; /&gt;&#xD;&#xA;&lt;/ClassDiagram&gt;">
+    <Position X="0.5" Y="0.5" Height="4.215" Width="1.999" />
+  </Comment>
+  <Class Name="YarnsAndMobile.Models.Book" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAASAAAAQAAAEAAgAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Models\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

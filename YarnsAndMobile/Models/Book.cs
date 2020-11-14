@@ -12,6 +12,6 @@ namespace YarnsAndMobile.Models
         public string Author { get; set; }
         public short CopyrightYear { get; set; }
         public string ISBN { get; set; }
-        public string ImageURL { get; set; }
+        public string ImageUrl { get; set; }
     }
 }
