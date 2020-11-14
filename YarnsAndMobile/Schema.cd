@@ -4,7 +4,7 @@
     <Position X="0.5" Y="0.5" Height="4.215" Width="1.999" />
   </Comment>
   <Class Name="YarnsAndMobile.Models.Book" Collapsed="true">
-    <Position X="9.25" Y="0.5" Width="1.5" />
+    <Position X="10.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAASAAAAQAAAEAAgAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
       <FileName>Models\Book.cs</FileName>
@@ -27,7 +27,7 @@
       <FileName>Models\Address.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="YarnsAndMobile.Models.Phone" Collapsed="true">
+  <Class Name="YarnsAndMobile.Models.Phone">
     <Position X="4.75" Y="3.25" Width="1.5" />
     <AssociationLine Name="Member" Type="YarnsAndMobile.Models.Member" ManuallyRouted="true">
       <Path>
@@ -43,7 +43,15 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Member" />
+      <Property Name="Type" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="YarnsAndMobile.Models.PhoneType">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\PhoneType.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
