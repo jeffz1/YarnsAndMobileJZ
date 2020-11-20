@@ -13,5 +13,6 @@ namespace YarnsAndMobile.Models
         public short CopyrightYear { get; set; }
         public string ISBN { get; set; }
         public string ImageUrl { get; set; }
+        public decimal CurrentSalePrice { get; set; }
     }
 }
