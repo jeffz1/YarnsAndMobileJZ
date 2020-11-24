@@ -25,7 +25,7 @@
                 @Html.DisplayNameFor(model => model.ISBN)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ImageURL)
+                @Html.DisplayNameFor(model => model.ImageUrl)
             </th>
             <th></th>
         </tr>
@@ -46,9 +46,9 @@
                 @Html.DisplayFor(modelItem => item.ISBN)
             </td>
             <td>
-                @if (!string.IsNullOrEmpty(item.ImageURL))
+                @if (!string.IsNullOrEmpty(item.ImageUrl))
                 {
-                    <a href="@item.ImageURL">Link</a>
+                    <a href="@item.ImageUrl">Link</a>
                 }
             </td>
             <td>

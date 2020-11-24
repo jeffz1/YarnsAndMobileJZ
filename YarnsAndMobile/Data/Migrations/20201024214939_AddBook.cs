@@ -16,7 +16,7 @@ namespace YarnsAndMobile.Data.Migrations
                     Author = table.Column<string>(nullable: false),
                     CopyrightYear = table.Column<short>(nullable: false),
                     ISBN = table.Column<string>(nullable: true),
-                    ImageURL = table.Column<string>(nullable: true)
+                    ImageUrl = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

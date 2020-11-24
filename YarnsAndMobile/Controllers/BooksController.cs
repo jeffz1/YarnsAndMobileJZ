@@ -54,7 +54,7 @@ namespace YarnsAndMobile.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BookId,Title,Author,CopyrightYear,ISBN,ImageURL")] Book book)
+        public async Task<IActionResult> Create([Bind("BookId,Title,Author,CopyrightYear,ISBN,ImageUrl")] Book book)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace YarnsAndMobile.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BookId,Title,Author,CopyrightYear,ISBN,ImageURL")] Book book)
+        public async Task<IActionResult> Edit(int id, [Bind("BookId,Title,Author,CopyrightYear,ISBN,ImageUrl")] Book book)
         {
             if (id != book.BookId)
             {
