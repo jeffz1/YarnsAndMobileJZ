@@ -10,6 +10,7 @@ namespace YarnsAndMobile.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string AccountNumber { get; set; }
+        public string EmailAddress { get; set; }
         public virtual Address Address { get; set; }
         public virtual IEnumerable<Phone> Phones { get; set; }
         public virtual IEnumerable<Sale> Sales { get; set; }
