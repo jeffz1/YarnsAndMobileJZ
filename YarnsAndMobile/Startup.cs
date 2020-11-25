@@ -12,6 +12,7 @@ using YarnsAndMobile.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using YarnsAndMobile.Models;
 
 namespace YarnsAndMobile
 {
@@ -30,14 +31,15 @@ namespace YarnsAndMobile
             services.AddDbContext<YamDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<Member>(options => options.SignIn.RequireConfirmedAccount = false)
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<YamDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, UserManager<Member> userManager)
         {
             if (env.IsDevelopment())
             {
@@ -50,6 +52,9 @@ namespace YarnsAndMobile
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            ApplicationDbInitializer.SeedUsers(userManager);
+            
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -57,6 +62,7 @@ namespace YarnsAndMobile
 
             app.UseAuthentication();
             app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {
