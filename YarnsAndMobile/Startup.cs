@@ -33,13 +33,14 @@ namespace YarnsAndMobile
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<Member>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>()
+                .AddRoleManager<RoleManager<IdentityRole>>()    // See https://stackoverflow.com/questions/50426278/how-to-use-roles-in-asp-net-core-2-1
                 .AddEntityFrameworkStores<YamDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, UserManager<Member> userManager)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, UserManager<Member> userManager, YamDbContext dbContext)
         {
             if (env.IsDevelopment())
             {
@@ -53,6 +54,7 @@ namespace YarnsAndMobile
                 app.UseHsts();
             }
 
+            dbContext.Database.EnsureCreated();
             ApplicationDbInitializer.SeedUsers(userManager);
             
             app.UseHttpsRedirection();
