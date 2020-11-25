@@ -10,6 +10,8 @@ namespace YarnsAndMobile.Data
         {            
         }
 
+        public DbSet<Member> Members { get; set; }
         public DbSet<Book> Books { get; set; }
+
     }
 }
