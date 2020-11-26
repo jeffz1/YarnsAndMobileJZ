@@ -1,0 +1,16 @@
+﻿To add a default administrator role and user
+	See https://stackoverflow.com/questions/50785009/how-to-seed-an-admin-user-in-ef-core-2-1-0
+		Seed the admin role into the IdentityRole entity (in DbContext.OnModelCreating)
+		Create seed code for the admin user (in ApplicationDbInitializer.SeedUsers)
+		Call AddRoles<IdentityRole> when registering Identity
+		Call ApplicationDbInitializer.SeedUsers(userManager) from Startup.Configure (requires injecting userManager)
+
+To enable roles
+	See https://docs.microsoft.com/en-us/aspnet/core/security/authorization/roles?view=aspnetcore-5.0
+	See https://stackoverflow.com/questions/50426278/how-to-use-roles-in-asp-net-core-2-1
+	Additionally, call AddRoleManager<RoleManager<IdentityRole>>() when registering Identity
+
+To enable SQL debugging for EF queries
+	Call EnableSensitiveDataLogging() when registering DbContext in Startup.ConfigureServices
+	Add "Microsoft.EntityFrameworkCore.Database.Command":  "Information" to appsettings.json under Logging/LogLevel
+	I recommend qualifying this by both a user defined configuration setting and development mode
