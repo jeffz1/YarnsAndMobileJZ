@@ -9,7 +9,7 @@ namespace YarnsAndMobile.Data
 {
     public static class ApplicationDbInitializer
     {
-        public static void SeedUsers(UserManager<Member> userManager)
+        public static void SeedUsers(UserManager<Member> userManager, string userId = null)
         {
             if (userManager.FindByEmailAsync("jb@yarnsandmobile.com").Result == null)
             {
@@ -19,7 +19,8 @@ namespace YarnsAndMobile.Data
                     Email = "jb@yarnsandmobile.com",
                     AccountNumber = "FLSO00000001",
                     FirstName = "Jester",
-                    LastName = "Bozo"
+                    LastName = "Bozo",
+                    Id = userId
                 };
 
                 IdentityResult result = userManager.CreateAsync(user, "Dwindle!2020").Result;

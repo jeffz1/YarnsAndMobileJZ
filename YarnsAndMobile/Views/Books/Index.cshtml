@@ -43,7 +43,7 @@
                 @Html.DisplayFor(modelItem => item.CopyrightYear)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ISBN)
+                @Html.Raw(item.ISBN.Replace("-", "&#8209;"));
             </td>
             <td>
                 @if (!string.IsNullOrEmpty(item.ImageUrl))
