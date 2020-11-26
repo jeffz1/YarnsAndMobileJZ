@@ -54,6 +54,10 @@ namespace YarnsAndMobile
             }
 
             dbContext.Database.EnsureCreated();
+            using (var scope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                scope.ServiceProvider.GetService<YamDbContext>().Database.Migrate();
+            }
             ApplicationDbInitializer.SeedUsers(userManager);
             
             app.UseHttpsRedirection();

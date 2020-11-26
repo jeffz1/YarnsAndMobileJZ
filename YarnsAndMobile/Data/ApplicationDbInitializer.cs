@@ -20,7 +20,7 @@ namespace YarnsAndMobile.Data
                     AccountNumber = "FLSO00000001",
                     FirstName = "Jester",
                     LastName = "Bozo",
-                    Id = userId
+                    Id = "75c82e22-c4fc-4de8-87e5-da3c964a88a6"
                 };
 
                 IdentityResult result = userManager.CreateAsync(user, "Dwindle!2020").Result;

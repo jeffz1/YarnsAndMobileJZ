@@ -43,7 +43,7 @@ namespace YarnsAndMobile.Controllers
         {
             var currentAdminId = _userManager.GetUserId(User);
             _dbContext.Database.EnsureDeleted();
-            _dbContext.Database.EnsureCreated();
+            _dbContext.Database.Migrate(); //Creates database if needed and applies migrations
             ApplicationDbInitializer.SeedUsers(_userManager, currentAdminId);
             var message = LoadImportData();
             if (!string.IsNullOrWhiteSpace(message))
