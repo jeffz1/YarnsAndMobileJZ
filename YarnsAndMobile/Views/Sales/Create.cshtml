@@ -1,0 +1,46 @@
+﻿@model YarnsAndMobile.Models.Sale
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Buy a book</h1>
+
+<h4>Sale</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" asp-controller="Sales">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Book.BookId"/>
+            <input type="hidden" asp-for="Member.Id" />
+            <input type="hidden" asp-for="Member.FirstName" />
+            <input type="hidden" asp-for="Member.LastName" />
+            <input type="hidden" asp-for="Member.AccountNumber" />
+            <div class="form-group">
+                <label asp-for="Book.Title" class="control-label"></label>
+                <input asp-for="Book.Title" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="Book.Author" class="control-label"></label>
+                <input asp-for="Book.Author" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Buy this book" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
